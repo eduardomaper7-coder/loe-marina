@@ -129,7 +129,7 @@ window.LOE_CATALOG = [
       "Bienestar y spa",
       "Tratamientos corporales"
     ],
-    "image": "/spa-amazonas.png",
+    "image": "/assets/img/spa-amazonas.png",
     "variantOption": "",
     "variants": []
   },
