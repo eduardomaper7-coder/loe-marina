@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Tienda | Loe Marina</title>
+    <meta name="description" content="Compra tratamientos, bonos y experiencias de Loe Marina. Tienda preparada para Reflow.">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.reflowhq.com/v2/toolkit.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body data-page="tienda">
+    <div class="announcement">
+        <div class="container"><strong>Centro médico-estético en Tenerife</strong><span>·</span><span>Valoración personalizada</span></div>
+    </div>
+    <header class="site-header">
+        <div class="container header-inner"><a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Loe Marina Centro Médico Estético"></a>
+            <nav class="nav" aria-label="Navegación principal"><a href="index.html" data-nav="inicio">Inicio</a><a href="index.html#tratamientos">Tratamientos</a><a href="tienda.html" data-nav="tienda">Tienda</a><a href="index.html#nosotros">Nosotros</a><a href="contacto.html" data-nav="contacto">Contacto</a></nav>
+            <div class="header-actions">
+                <div class="header-commerce">
+                    <div class="header-reflow reflow-live-only">
+                        <div data-reflow-type="auth-button" data-reflow-signin-redirect="mi-cuenta.html" data-reflow-signout-redirect="index.html" data-reflow-user-page-url="mi-cuenta.html" data-reflow-show="photo"></div>
+                        <div data-reflow-type="view-cart" data-reflow-summary-type="sidebar" data-reflow-summary-position="right" data-reflow-shoppingcart-url="carrito.html"><span class="commerce-link"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 4h2l2.3 10h10.9l2-7H6"></path><circle cx="9" cy="19" r="1.3"></circle><circle cx="18" cy="19" r="1.3"></circle></svg></span></div>
+                    </div>
+                    <div class="reflow-demo-only" style="display:flex;gap:8px;"><a class="commerce-link" href="mi-cuenta.html" aria-label="Mi cuenta"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.8-4 3.1-6 7-6s6.2 2 7 6"></path></svg></a><a class="commerce-link" href="carrito.html" aria-label="Carrito"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 4h2l2.3 10h10.9l2-7H6"></path><circle cx="9" cy="19" r="1.3"></circle><circle cx="18" cy="19" r="1.3"></circle></svg><span class="demo-cart-count">0</span></a></div>
+                </div><a class="btn btn-primary desktop-cta" role="button" href="contacto.html">Pide tu cita</a><button class="icon-btn menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="shop-hero">
+            <div class="container shop-hero-grid">
+                <div class="reveal"><span class="section-kicker">Tienda Loe Marina</span>
+                    <h1>Cuidarte también puede empezar aquí.</h1>
+                    <p>Explora tratamientos, packs y experiencias. Selecciona la opción que encaja contigo y completa la compra de forma segura cuando conectes tu proyecto Reflow.</p>
+                    <div class="shop-benefits"><span class="benefit-pill">Pago seguro con Reflow</span><span class="benefit-pill">Variantes por sesiones o zonas</span><span class="benefit-pill">Bonos para regalar</span></div>
+                </div>
+                <div class="shop-hero-card reveal"><img src="assets/img/gift-banner.jpg" alt="Experiencia de bienestar Loe Marina"></div>
+            </div>
+        </section>
+        <section class="store-shell">
+            <div class="container">
+                <div class="store-toolbar">
+                    <div class="reflow-live-only">
+                        <div data-reflow-type="product-search" data-reflow-search-url="tienda.html" data-reflow-show-button="true" data-reflow-button-text="Buscar" data-reflow-placeholder="Busca un tratamiento"></div>
+                    </div><label class="store-search reflow-demo-only"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg><input type="search" id="demo-search" placeholder="Busca por tratamiento o necesidad"></label><span id="demo-store-count" class="store-count reflow-demo-only"></span>
+                </div>
+                <div class="store-layout">
+                    <aside class="store-aside">
+                        <h2>Categorías</h2>
+                        <div data-reflow-type="category-list" data-reflow-layout="unstyled" data-reflow-category-link="tienda.html?category={id}" class="reflow-live-only"></div>
+                        <div id="demo-categories" class="demo-category-list reflow-demo-only"></div>
+                    </aside>
+                    <div>
+                        <div class="reflow-live-only reflow-component-card">
+                            <div data-reflow-type="product-list" data-reflow-addtocart-text="Añadir" data-reflow-addtocart-preview="selective" data-reflow-shoppingcart-url="carrito.html" data-reflow-layout="cards" data-reflow-perpage="18" data-reflow-order="custom_desc,name_asc" data-reflow-product-link="producto.html?product={handle}"></div>
+                        </div>
+                        <div id="demo-product-list" class="demo-product-list reflow-demo-only"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" style="background:var(--sage-2);">
+            <div class="container faq-grid">
+                <div><span class="section-kicker">Compra con confianza</span>
+                    <h2 class="section-heading">Todo preparado para Reflow</h2>
+                    <p class="section-copy">Las fichas admiten variantes por número de sesiones o zona, personalizaciones y un checkout completo.</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item"><button class="faq-question" type="button"><span>¿La compra reserva automáticamente la cita?</span><span>+</span></button>
+                        <div class="faq-answer">
+                            <p>La compra confirma el tratamiento o bono. El equipo contactará para validar la indicación y acordar la fecha disponible.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"><button class="faq-question" type="button"><span>¿Puedo comprar para regalar?</span><span>+</span></button>
+                        <div class="faq-answer">
+                            <p>Sí. Los productos con personalización pueden solicitar nombre, correo y mensaje para la persona destinataria.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item"><button class="faq-question" type="button"><span>¿Qué ocurre si tengo dudas antes de pagar?</span><span>+</span></button>
+                        <div class="faq-answer">
+                            <p>Contacta con el centro y te orientaremos según tus objetivos, presupuesto y posibles contraindicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand"><img src="assets/img/logo.png" alt="Loe Marina">
+                <p>Centro médico-estético en Santa Cruz de Tenerife. Tratamientos personalizados, tecnología y acompañamiento cercano.</p>
+            </div>
+            <div>
+                <h3 class="footer-title">Explora</h3>
+                <div class="footer-links"><a href="index.html#tratamientos">Tratamientos</a><a href="tienda.html">Tienda</a><a href="mi-cuenta.html">Mi cuenta</a><a href="contacto.html">Contacto</a></div>
+            </div>
+            <div>
+                <h3 class="footer-title">Compra</h3>
+                <div class="footer-links"><a href="carrito.html">Carrito</a><a href="pedido.html">Consultar pedido</a><a href="tienda.html?search=bono">Bonos regalo</a><a href="pago-cancelado.html">Ayuda con el pago</a></div>
+            </div>
+            <div>
+                <h3 class="footer-title">Contacto</h3>
+                <div class="footer-links"><a href="tel:+34922236677">922 236 677</a><a href="tel:+34647892305">647 892 305</a><span>L–V · 10:00–19:00</span><a href="contacto.html">Los Dragos, 8 · Local A-3</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><span>© <span data-year=""></span> Loe Marina.</span>
+                <div class="legal-links"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a></div>
+            </div>
+        </div>
+    </footer>
+    <div class="toast hide" role="status" data-bs-animation="false" aria-live="polite"></div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.reflowhq.com/v2/toolkit.min.js" data-reflow-project="1808290160"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/catalog.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/reflow-loader.js"></script>
+</body>
+
+</html>
