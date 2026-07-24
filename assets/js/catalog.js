@@ -10,7 +10,7 @@ window.LOE_CATALOG = [
       "Tratamientos faciales",
       "Bonos y packs"
     ],
-    "image": "/lift-eyes-guinot.png",
+    "image": "/assets/img/lift-eyes-guinot.png",
     "variantOption": "Sesiones",
     "variants": [
       {
@@ -36,7 +36,7 @@ window.LOE_CATALOG = [
       "Tratamientos faciales",
       "Bonos y packs"
     ],
-    "image": "/hydra-summum.png",
+    "image": "/assets/img/hydra-summum.png",
     "variantOption": "Sesiones",
     "variants": [
       {
@@ -62,7 +62,7 @@ window.LOE_CATALOG = [
       "Tratamientos faciales",
       "Bonos y packs"
     ],
-    "image": "/hydra-peeling.png",
+    "image": "/assets/img/hydra-peeling.png",
     "variantOption": "Sesiones",
     "variants": [
       {
@@ -88,7 +88,7 @@ window.LOE_CATALOG = [
       "Tratamientos faciales",
       "Bonos y packs"
     ],
-    "image": "/nueva-hydradermie-plus.png",
+    "image": "/assets/img/nueva-hydradermie-plus.png",
     "variantOption": "Sesiones",
     "variants": [
       {
@@ -114,7 +114,7 @@ window.LOE_CATALOG = [
       "Tratamientos corporales",
       "Bonos y packs"
     ],
-    "image": "/crioterapia-presoterapia.png",
+    "image": "/assets/img/crioterapia-presoterapia.png",
     "variantOption": "",
     "variants": []
   },
@@ -144,7 +144,7 @@ window.LOE_CATALOG = [
       "Tratamientos faciales",
       "Bonos y packs"
     ],
-    "image": "/facial-vitamina-c.png",
+    "image": "/assets/img/facial-vitamina-c.png",
     "variantOption": "",
     "variants": []
   },
@@ -159,7 +159,7 @@ window.LOE_CATALOG = [
       "Tratamientos faciales",
       "Bonos y packs"
     ],
-    "image": "/higiene-facial-profunda.png",
+    "image": "/assets/img/higiene-facial-profunda.png",
     "variantOption": "Sesiones",
     "variants": [
       {
@@ -185,7 +185,7 @@ window.LOE_CATALOG = [
       "Depilación láser",
       "Bonos y packs"
     ],
-    "image": "/pack-depilacion-laser-5-sesiones.png",
+    "image": "/assets/img/pack-depilacion-laser-5-sesiones.png",
     "variantOption": "Zona",
     "variants": [
       {
@@ -236,7 +236,7 @@ window.LOE_CATALOG = [
       "Tratamientos faciales",
       "Bonos y packs"
     ],
-    "image": "/pack-antiedad-vitaminas-facial.png",
+    "image": "/assets/img/pack-antiedad-vitaminas-facial.png",
     "variantOption": "Sesiones",
     "variants": [
       {
@@ -262,7 +262,7 @@ window.LOE_CATALOG = [
       "Tratamientos corporales",
       "Bonos y packs"
     ],
-    "image": "/pack-reduccion-volumen-presoterapia.png",
+    "image": "/assets/img/pack-reduccion-volumen-presoterapia.png",
     "variantOption": "Sesiones",
     "variants": [
       {
@@ -288,7 +288,7 @@ window.LOE_CATALOG = [
       "Tratamientos faciales",
       "Bonos y packs"
     ],
-    "image": "/pack-lifting-ojos-hydradermie.png",
+    "image": "/assets/img/pack-lifting-ojos-hydradermie.png",
     "variantOption": "Sesiones",
     "variants": [
       {
@@ -314,7 +314,7 @@ window.LOE_CATALOG = [
       "Tratamientos faciales",
       "Bonos y packs"
     ],
-    "image": "/pack-radiofrecuencia-carboxi.png",
+    "image": "/assets/img/pack-radiofrecuencia-carboxi.png",
     "variantOption": "Sesiones",
     "variants": [
       {
@@ -340,7 +340,7 @@ window.LOE_CATALOG = [
       "Bonos y packs",
       "Tarjetas regalo"
     ],
-    "image": "/gift-card.png",
+    "image": "/assets/img/gift-card.png",
     "variantOption": "Importe",
     "variants": [
       {
