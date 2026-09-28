@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /carrito.html
+Disallow: /pedido.html
+Disallow: /gracias.html
+Disallow: /pago-cancelado.html
+
+Sitemap: https://loemarina.es/sitemap.xml

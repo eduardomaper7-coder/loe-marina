@@ -4690,3 +4690,583 @@ body[data-page="tienda"] [data-reflow-type="product-list"] {
     transition: none !important;
   }
 }
+
+/* =========================================================
+   Página: Depilación eléctrica (depilacion-electrica-tenerife.html)
+   ========================================================= */
+.de-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  line-height: 1;
+}
+
+.de-hero h1 em {
+  color: var(--forest-2);
+  font-weight: 500;
+}
+
+.de-hero .hero-trust {
+  margin-top: 36px;
+}
+
+.de-hero .page-hero-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+}
+
+.de-jump {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 20;
+  background: rgba(250, 247, 241, .94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(24, 52, 44, .08);
+}
+
+.de-jump .container {
+  display: flex;
+  gap: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.de-jump .container::-webkit-scrollbar {
+  display: none;
+}
+
+.de-jump a {
+  flex: 0 0 auto;
+  padding: 7px 14px;
+  border: 1px solid rgba(24, 52, 44, .14);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: .82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.de-jump a:hover,
+.de-jump a:focus-visible {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--white);
+}
+
+#main-content section[id] {
+  scroll-margin-top: calc(var(--header-h) + 70px);
+}
+
+.de-key {
+  margin-top: 0;
+}
+
+.de-key li {
+  margin-bottom: 12px;
+  color: var(--ink-soft);
+}
+
+.de-key li strong {
+  color: var(--ink);
+}
+
+.de-small {
+  margin-top: 18px;
+  color: var(--ink-soft);
+  font-size: .9rem;
+}
+
+.de-small a,
+.de-card a {
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.de-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 46px;
+}
+
+.de-card {
+  padding: 30px;
+  background: var(--cream);
+  border: 1px solid rgba(24, 52, 44, .08);
+  border-radius: var(--radius-md);
+}
+
+.section:not([style]) .de-card {
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.de-card h3 {
+  margin: 0 0 10px;
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.de-card p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.de-num {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--leaf);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.de-list {
+  margin: 18px 0 0;
+  padding-left: 20px;
+  color: var(--ink-soft);
+}
+
+.de-list li {
+  margin-bottom: 9px;
+}
+
+.de-list li strong {
+  color: var(--ink);
+}
+
+.de-card .de-list {
+  margin-top: 0;
+}
+
+.de-table-wrap {
+  margin-top: 36px;
+  overflow-x: auto;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.de-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+}
+
+.de-table th,
+.de-table td {
+  padding: 16px 22px;
+  border-bottom: 1px solid rgba(24, 52, 44, .08);
+  text-align: left;
+  vertical-align: top;
+}
+
+.de-table thead th {
+  background: var(--forest);
+  color: var(--white);
+  font-size: .82rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.de-table thead th:nth-child(2) {
+  background: var(--forest-2);
+}
+
+.de-table tbody th {
+  width: 30%;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.de-table td {
+  color: var(--ink-soft);
+}
+
+.de-table td:nth-child(2) {
+  background: var(--sage-2);
+}
+
+.de-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.de-zones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.de-zones h3 {
+  margin: 0 0 10px;
+  color: var(--forest);
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.de-zones ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.de-zones li {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(24, 52, 44, .1);
+}
+
+.de-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin: 46px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.de-steps li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.de-step-n {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--forest);
+  border-radius: 50%;
+  color: var(--white);
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+}
+
+.de-steps h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 850;
+}
+
+.de-steps p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: .94rem;
+}
+
+.de-top {
+  align-items: start;
+}
+
+.de-price-card {
+  padding: 38px;
+  background: var(--forest);
+  border-radius: var(--radius-lg);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.de-price-card .aside-kicker {
+  display: block;
+  margin-bottom: 12px;
+  color: #cfe7d9;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.de-price-card h3 {
+  margin: 0 0 14px;
+  font-family: Georgia, serif;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.de-price-card p {
+  color: rgba(255, 255, 255, .82);
+}
+
+.de-price-card ul {
+  margin: 20px 0 28px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, .9);
+}
+
+.de-price-card li {
+  margin-bottom: 8px;
+}
+
+.de-price-phone {
+  display: inline-block;
+  margin-left: 16px;
+  color: #cfe7d9;
+  font-weight: 700;
+}
+
+.de-note {
+  margin-top: 36px;
+  background: var(--white);
+  border-left: 3px solid var(--gold);
+}
+
+.de-map {
+  min-height: 440px;
+}
+
+.de-map iframe {
+  display: block;
+  height: 100%;
+  min-height: 440px;
+}
+
+#preguntas .btn {
+  margin-top: 24px;
+}
+
+.de-faq .faq-item.open .faq-answer {
+  max-height: 480px;
+}
+
+@media (max-width: 1050px) {
+  .de-grid,
+  .de-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .de-hero .page-hero-media img {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 680px) {
+  .de-grid,
+  .de-steps,
+  .de-zones {
+    grid-template-columns: 1fr;
+  }
+
+  .de-card,
+  .de-price-card {
+    padding: 24px;
+  }
+
+  .de-price-phone {
+    display: block;
+    margin: 14px 0 0;
+  }
+
+  .de-map,
+  .de-map iframe {
+    min-height: 320px;
+  }
+}
+
+/* --- Depilación láser + bloque doble en inicio --- */
+.de-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 22px;
+}
+
+.de-price-row .de-small {
+  max-width: 720px;
+  margin: 0;
+}
+
+.de-price-row .btn {
+  flex: 0 0 auto;
+}
+
+.de-price-table td:nth-child(2) strong {
+  color: var(--forest);
+  font-size: 1.05rem;
+}
+
+.de-inline-link,
+.de-card h3 a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.de-card h3 a {
+  text-decoration: none;
+  border-bottom: 1px dashed currentColor;
+}
+
+.de-small.centered {
+  text-align: center;
+}
+
+.dep-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  margin-top: 46px;
+}
+
+.dep-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.dep-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.dep-card-media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.dep-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.dep-card:hover .dep-card-media img {
+  transform: scale(1.04);
+}
+
+.dep-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 32px 34px 36px;
+}
+
+.dep-card-body h3 {
+  margin: 8px 0 10px;
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.dep-card-body h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.dep-card-body p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.dep-card-body ul {
+  margin: 18px 0 26px;
+  padding-left: 20px;
+  color: var(--ink);
+}
+
+.dep-card-body li {
+  margin-bottom: 6px;
+}
+
+.dep-card-body .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .dep-duo {
+    grid-template-columns: 1fr;
+  }
+
+  .de-price-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 680px) {
+  .dep-card-body {
+    padding: 24px;
+  }
+}
+
+.dep-kicker {
+  color: var(--leaf);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+/* --- Tabla dentro de artículos --- */
+.article-table-wrap {
+  margin: 26px 0 34px;
+  overflow-x: auto;
+  background: var(--white);
+  border: 1px solid rgba(24, 52, 44, .09);
+  border-radius: var(--radius-sm);
+}
+
+.article-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: .92rem;
+}
+
+.article-table th,
+.article-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(24, 52, 44, .08);
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-table thead th {
+  background: var(--forest);
+  color: var(--white);
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.article-table tbody th {
+  color: var(--ink);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.article-table td {
+  color: var(--ink-soft);
+}
+
+.article-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.article-aside .aside-treatment + .aside-treatment {
+  background: var(--forest-2);
+}
+
+.article-layout > .article-body {
+  min-width: 0;
+}
