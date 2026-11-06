@@ -20,11 +20,12 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <meta name="theme-color" content="#174b3a">
+    <meta name="theme-color" content="#2a1c17">
     <title>Tienda | Loe Marina</title>
-    <meta name="description" content="Compra tratamientos, bonos y experiencias de Loe Marina. Tienda preparada para Reflow.">
+    <meta name="description" content="Compra tratamientos, bonos y experiencias de Loe Marina. Tienda online de Loe Marina.">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.reflowhq.com/v2/toolkit.min.css">
+    <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -35,7 +36,7 @@
         <div class="container"><strong>Centro médico-estético en Tenerife</strong><span>·</span><span>Valoración personalizada</span></div>
     </div>
     <header class="site-header">
-        <div class="container header-inner"><a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Loe Marina Centro Médico Estético"></a>
+        <div class="container header-inner"><a class="brand" href="index.html" aria-label="Loe Marina · Centro médico estético, inicio"><img class="brand-mark" src="assets/img/brand/monogram-sm.webp" width="60" height="60" alt=""><span class="brand-word"><span class="brand-name">Loe Marina</span><span class="brand-tag">Centro médico estético</span></span></a>
             <nav class="nav" id="primary-navigation" aria-label="Navegación principal"><a href="index.html" data-nav="inicio">Inicio</a><a href="index.html#tratamientos">Tratamientos</a><a href="tienda.html" data-nav="tienda">Tienda</a><a href="index.html#nosotros">Nosotros</a><a href="blog.html" data-nav="blog">Blog</a><a href="contacto.html" data-nav="contacto">Contacto</a></nav>
             <div class="header-actions">
                 <div class="header-commerce">
@@ -51,12 +52,12 @@
     <main id="main-content" tabindex="-1">
         <section class="shop-hero">
             <div class="container shop-hero-grid">
-                <div class="reveal"><span class="section-kicker">Tienda Loe Marina</span>
-                    <h1>Cuidarte también puede empezar aquí.</h1>
-                    <p>Explora tratamientos, packs y experiencias. Selecciona la opción que encaja contigo y completa la compra de forma segura cuando conectes tu proyecto Reflow.</p>
-                    <div class="shop-benefits"><span class="benefit-pill">Pago seguro con Reflow</span><span class="benefit-pill">Variantes por sesiones o zonas</span><span class="benefit-pill">Bonos para regalar</span></div>
+                <div class="reveal"><span class="section-kicker">Christmas Beauty Collection</span>
+                    <h1>Promociones de <em>Navidad</em></h1>
+                    <p>Once packs de belleza y bienestar para cuidarte o para regalar estas fiestas. Promociones válidas hasta el 31 de diciembre de 2026.</p>
+                    <div class="shop-benefits"><span class="benefit-pill">Cuida de ti</span><span class="benefit-pill">Regala belleza</span><span class="benefit-pill">Regala bienestar</span></div>
                 </div>
-                <div class="shop-hero-card reveal"><img src="assets/img/gift-banner.jpg" alt="Experiencia de bienestar Loe Marina"></div>
+                <div class="shop-hero-card reveal"><img src="assets/img/navidad/tienda-cabecera-beige.jpg" alt="Experiencia de bienestar Loe Marina"></div>
             </div>
         </section>
         <section class="store-shell">
@@ -84,8 +85,8 @@
         <section class="section" style="background:var(--sage-2);">
             <div class="container faq-grid">
                 <div><span class="section-kicker">Compra con confianza</span>
-                    <h2 class="section-heading">Todo preparado para Reflow</h2>
-                    <p class="section-copy">Las fichas admiten variantes por número de sesiones o zona, personalizaciones y un checkout completo.</p>
+                    <h2 class="section-heading">Pago seguro con Stripe</h2>
+                    <p class="section-copy">Pagas con tarjeta, Apple Pay o Google Pay en la pasarela cifrada de Stripe. Nunca vemos ni guardamos los datos de tu tarjeta.</p>
                 </div>
                 <div class="faq-list">
                     <div class="faq-item"><button class="faq-question" type="button"><span>¿La compra reserva automáticamente la cita?</span><span>+</span></button>
@@ -95,7 +96,7 @@
                     </div>
                     <div class="faq-item"><button class="faq-question" type="button"><span>¿Puedo comprar para regalar?</span><span>+</span></button>
                         <div class="faq-answer">
-                            <p>Sí. Los productos con personalización pueden solicitar nombre, correo y mensaje para la persona destinataria.</p>
+                            <p>Sí. Al pagar puedes indicar el nombre de la persona que recibe el regalo y prepararemos su bono.</p>
                         </div>
                     </div>
                     <div class="faq-item"><button class="faq-question" type="button"><span>¿Qué ocurre si tengo dudas antes de pagar?</span><span>+</span></button>
@@ -109,7 +110,7 @@
     </main>
     <footer class="site-footer">
         <div class="container footer-grid">
-            <div class="footer-brand"><img src="assets/img/logo.png" alt="Loe Marina">
+            <div class="footer-brand"><a class="footer-lockup" href="index.html" aria-label="Loe Marina, inicio"><img src="assets/img/brand/monogram-sm.webp" width="84" height="84" alt="" loading="lazy"><span class="brand-word"><span class="brand-name">Loe Marina</span><span class="brand-tag">Centro médico estético</span></span></a>
                 <p>Centro médico-estético en Santa Cruz de Tenerife. Tratamientos personalizados, tecnología y acompañamiento cercano.</p>
             </div>
             <div>
@@ -133,10 +134,9 @@
     </footer>
     <div class="toast hide" role="status" data-bs-animation="false" aria-live="polite"></div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.reflowhq.com/v2/toolkit.min.js" data-reflow-project="1808290160"></script>
     <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/catalog.js"></script>
-    <script src="assets/js/site.js"></script>
+    <script src="assets/js/catalog.js?v=20261106-recuperado-4"></script>
+    <script src="assets/js/site.js?v=20261106-recuperado-4"></script>
     <script src="assets/js/reflow-loader.js"></script>
 </body>
 

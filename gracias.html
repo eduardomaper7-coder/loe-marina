@@ -20,11 +20,12 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <meta name="theme-color" content="#174b3a">
+    <meta name="theme-color" content="#2a1c17">
     <title>Gracias por tu compra | Loe Marina</title>
     <meta name="description" content="Confirmación de compra y estado del pedido.">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.reflowhq.com/v2/toolkit.min.css">
+    <link rel="preload" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -35,7 +36,7 @@
         <div class="container"><strong>Centro médico-estético en Tenerife</strong><span>·</span><span>Valoración personalizada</span></div>
     </div>
     <header class="site-header">
-        <div class="container header-inner"><a class="brand" href="index.html"><img src="assets/img/logo.png" alt="Loe Marina Centro Médico Estético"></a>
+        <div class="container header-inner"><a class="brand" href="index.html" aria-label="Loe Marina · Centro médico estético, inicio"><img class="brand-mark" src="assets/img/brand/monogram-sm.webp" width="60" height="60" alt=""><span class="brand-word"><span class="brand-name">Loe Marina</span><span class="brand-tag">Centro médico estético</span></span></a>
             <nav class="nav" id="primary-navigation" aria-label="Navegación principal"><a href="index.html" data-nav="inicio">Inicio</a><a href="index.html#tratamientos">Tratamientos</a><a href="tienda.html" data-nav="tienda">Tienda</a><a href="index.html#nosotros">Nosotros</a><a href="blog.html" data-nav="blog">Blog</a><a href="contacto.html" data-nav="contacto">Contacto</a></nav>
             <div class="header-actions">
                 <div class="header-commerce">
@@ -52,7 +53,7 @@
         <section class="commerce-page-hero">
             <div class="container"><span class="section-kicker">Compra completada</span>
                 <h1>Gracias por confiar en Loe Marina.</h1>
-                <p>Tu pedido ha quedado registrado. Conserva esta página para consultar los detalles.</p>
+                <p>Tu pago se ha completado correctamente.</p>
             </div>
         </section>
         <section class="commerce-content">
@@ -61,15 +62,10 @@
                     <aside class="status-intro">
                         <div class="success-mark"><span>✓</span></div>
                         <h2>¿Qué ocurre ahora?</h2>
-                        <p>Recibirás la confirmación de Reflow por correo. El equipo de Loe Marina podrá contactar contigo para organizar la cita o preparar el bono regalo.</p><a class="btn" role="button" style="background:#fff;color:var(--forest);" href="tienda.html">Seguir explorando</a>
+                        <p>Stripe te envía el recibo por correo. En las próximas horas el equipo de Loe Marina te contactará para agendar tu cita o preparar tu bono regalo.</p><a class="btn btn-light" role="button" href="tel:+34922236677">Llamar al 922 236 677</a>
                     </aside>
-                    <div class="reflow-live-only reflow-component-card">
-                        <div data-reflow-type="order-status"></div>
-                    </div>
-                    <div class="reflow-demo-only notice-card">
-                        <h2>Pedido de demostración recibido</h2>
-                        <p>Esta es la vista previa. Al conectar Reflow aparecerán aquí el número de pedido, los productos, el total, los datos del cliente y el estado del pago.</p>
-                        <div class="notice-actions"><a class="btn btn-primary" role="button" href="pedido.html?order_id=testing&amp;secure_hash=testing">Probar estado de pedido</a><a class="btn btn-secondary" role="button" href="contacto.html">Contactar con el centro</a></div>
+                    <div class="notice-card order-summary" id="order-summary" aria-live="polite">
+                        <p>Cargando el resumen de tu pedido…</p>
                     </div>
                 </div>
             </div>
@@ -77,7 +73,7 @@
     </main>
     <footer class="site-footer">
         <div class="container footer-grid">
-            <div class="footer-brand"><img src="assets/img/logo.png" alt="Loe Marina">
+            <div class="footer-brand"><a class="footer-lockup" href="index.html" aria-label="Loe Marina, inicio"><img src="assets/img/brand/monogram-sm.webp" width="84" height="84" alt="" loading="lazy"><span class="brand-word"><span class="brand-name">Loe Marina</span><span class="brand-tag">Centro médico estético</span></span></a>
                 <p>Centro médico-estético en Santa Cruz de Tenerife. Tratamientos personalizados, tecnología y acompañamiento cercano.</p>
             </div>
             <div>
@@ -101,10 +97,9 @@
     </footer>
     <div class="toast hide" role="status" data-bs-animation="false" aria-live="polite"></div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.reflowhq.com/v2/toolkit.min.js" data-reflow-project="1808290160"></script>
     <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/catalog.js"></script>
-    <script src="assets/js/site.js"></script>
+    <script src="assets/js/catalog.js?v=20261106-recuperado-4"></script>
+    <script src="assets/js/site.js?v=20261106-recuperado-4"></script>
     <script src="assets/js/reflow-loader.js"></script>
 </body>
 
