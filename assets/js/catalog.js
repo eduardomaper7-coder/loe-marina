@@ -4,21 +4,6 @@
 (function (root) {
   var CATALOG = [
     {
-      "id": "prueba-ritual-belleza-bienestar",
-      "handle": "prueba-ritual-belleza-bienestar",
-      "name": "Ritual Belleza & Bienestar (PRUEBA)",
-      "price": 0.5,
-      "description": "<p><strong>Producto de prueba oculto para comprobar el pago. Bórralo cuando termines.</strong></p><p>Un ritual completo de belleza y bienestar pensado para regalar o regalarte estas fiestas.</p><ul><li>Tratamiento facial con DMAE o vitamina C.</li><li>Limpieza de cutis.</li><li>Masaje corporal + peeling + envoltura de chocolate blanco y cerezas.</li></ul>",
-      "excerpt": "Producto de prueba (0,50 €) para comprobar el pago. Se retirará en breve.",
-      "categories": [
-        "Promociones de Navidad",
-        "Facial y corporal"
-      ],
-      "image": "/assets/img/navidad/ritual-belleza-bienestar-beige.jpg",
-      "variantOption": "",
-      "variants": []
-    },
-    {
       "id": "ritual-belleza-bienestar",
       "handle": "ritual-belleza-bienestar",
       "name": "Ritual Belleza & Bienestar",

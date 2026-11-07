@@ -5870,3 +5870,43 @@ body[data-page="tienda"] .demo-product-image { aspect-ratio: 1 / 1; }
 .order-summary .ticket-download p { margin: 4px 0 0; color: var(--ink-soft); font-size: .95rem; }
 .order-summary .ticket-download p strong { display: inline; font-family: inherit; font-size: inherit; }
 .order-summary .ticket-download .btn { grid-column: 1 / -1; justify-self: start; margin-top: 10px; }
+
+/* Popup de Navidad */
+.promo-pop { position: fixed; inset: 0; z-index: 30000; display: grid; place-items: center; padding: 20px; opacity: 0; transition: opacity .25s ease; }
+.promo-pop.is-open { opacity: 1; }
+.promo-pop-backdrop { position: absolute; inset: 0; background: rgba(31, 21, 18, .55); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); }
+.promo-pop-card { position: relative; display: grid; grid-template-columns: 1fr 1.1fr; width: min(820px, 100%); max-height: calc(100svh - 40px); overflow: auto; background: var(--cream); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); transform: translateY(14px) scale(.98); transition: transform .3s ease; }
+.promo-pop.is-open .promo-pop-card { transform: none; }
+.promo-pop-media img { display: block; width: 100%; height: 100%; min-height: 100%; object-fit: cover; }
+.promo-pop-body { padding: 44px 40px 34px; display: flex; flex-direction: column; justify-content: center; }
+.promo-pop-body h2 { margin: 12px 0 14px; font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.05; color: var(--cocoa); }
+.promo-pop-body h2 em { font-style: italic; color: var(--copper-700); }
+.promo-pop-body p { margin: 0 0 24px; color: var(--ink-soft); line-height: 1.6; }
+.promo-pop-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.promo-pop-later { background: none; border: 0; padding: 6px 0; color: var(--ink-soft); font: inherit; font-size: .92rem; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.promo-pop-body small { display: block; margin-top: 20px; font-size: .78rem; color: var(--ink-soft); letter-spacing: .02em; }
+.promo-pop-x { position: absolute; top: 12px; right: 12px; z-index: 2; width: 38px; height: 38px; border: 0; border-radius: 50%; background: rgba(252, 248, 244, .92); color: var(--cocoa); font-size: 1.5rem; line-height: 1; cursor: pointer; box-shadow: var(--shadow-sm); }
+@media (max-width: 680px) {
+  .promo-pop { align-items: end; padding: 12px; }
+  .promo-pop-card { grid-template-columns: 1fr; border-radius: var(--radius-md); }
+  .promo-pop-media { height: 180px; }
+  .promo-pop-body { padding: 24px 22px 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .promo-pop, .promo-pop-card { transition: none; } }
+
+/* Pasos de compra (ficha de producto) y aviso de entrega (carrito) */
+.buy-steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 920px; margin: 30px auto 34px; padding: 0; text-align: left; counter-reset: none; }
+.buy-steps li { position: relative; padding: 24px 22px 22px; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius-md); }
+.buy-steps li > span { display: grid; place-items: center; width: 34px; height: 34px; margin-bottom: 14px; border-radius: 50%; background: var(--cocoa); color: var(--copper-300); font-family: var(--serif); font-size: 1.15rem; }
+.buy-steps strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.3rem; color: var(--ink); line-height: 1.15; }
+.buy-steps p { margin: 6px 0 0; color: var(--ink-soft); font-size: .95rem; line-height: 1.5; }
+@media (max-width: 760px) { .buy-steps { grid-template-columns: 1fr; gap: 12px; } }
+.cart-delivery { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; margin: 18px 0 4px; padding: 14px 16px; border-radius: var(--radius-sm); background: var(--sage-2); border: 1px solid var(--line); }
+.cart-delivery svg { width: 22px; height: 22px; margin-top: 2px; color: var(--copper-700); }
+.cart-delivery p { margin: 0; font-size: .9rem; line-height: 1.5; color: var(--ink-soft); }
+.cart-delivery strong { color: var(--ink); }
+.buy-steps li > span { font-family: var(--sans); font-size: .95rem; font-weight: 500; }
+@media (max-width: 760px) {
+  .buy-steps li { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; padding: 16px 18px; }
+  .buy-steps li > span { grid-row: span 2; margin: 0; }
+}
