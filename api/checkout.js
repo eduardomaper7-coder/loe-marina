@@ -12,6 +12,7 @@ const catalog = require('../assets/js/catalog.js');
 const ALLOWED_HOSTS = [/^(www\.)?loemarina\.com$/, /\.vercel\.app$/, /^localhost(:\d+)?$/, /^127\.0\.0\.1(:\d+)?$/];
 const MAX_LINES = 20;
 const MAX_QTY = 10;
+const MAX_BONOS = 40;
 
 function siteOrigin(req) {
   const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').toLowerCase();
@@ -53,6 +54,8 @@ function buildLines(items) {
     lines.push({ product, variant, sku, qty, unitAmount: Math.round(price * 100) });
   }
   if (!lines.length) throw new Error('Tu carrito está vacío.');
+  // Cada bono guarda su canje en la metadata del pago de Stripe (máx. 50 claves), así que limitamos las unidades por pedido.
+  if (lines.reduce((n, l) => n + l.qty, 0) > MAX_BONOS) throw new Error(`Puedes comprar hasta ${MAX_BONOS} bonos por pedido. Para más, llámanos al 922 236 677.`);
   return lines;
 }
 

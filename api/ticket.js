@@ -20,12 +20,12 @@ module.exports = async function handler(req, res) {
     const { bytes, tickets } = await buildTicketsPdf(session);
     const inline = req.query && req.query.view === '1';
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', `${inline ? 'inline' : 'attachment'}; filename="entradas-loe-marina-${tickets[0] ? tickets[0].ref : 'pedido'}.pdf"`);
+    res.setHeader('Content-Disposition', `${inline ? 'inline' : 'attachment'}; filename="bonos-loe-marina-${tickets[0] ? tickets[0].ref : 'pedido'}.pdf"`);
     res.setHeader('Cache-Control', 'private, no-store');
     return res.status(200).send(Buffer.from(bytes));
   } catch (err) {
     console.error('[ticket]', err);
     const status = err.status === 404 || err.status === 400 ? 404 : 502;
-    return res.status(status).json({ error: status === 404 ? 'No encontramos este pedido.' : 'No hemos podido generar tus entradas. Inténtalo de nuevo en unos minutos.' });
+    return res.status(status).json({ error: status === 404 ? 'No encontramos este pedido.' : 'No hemos podido generar tus bonos. Inténtalo de nuevo en unos minutos.' });
   }
 };

@@ -53,18 +53,19 @@ function emailHtml(session, tickets, downloadUrl) {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#fcf8f4;border-radius:18px;overflow:hidden">
 <tr><td style="background:#2a1c17;padding:28px 32px;text-align:center">
   <div style="font-size:11px;letter-spacing:3px;color:#ebb08a">LOE MARINA · CENTRO MÉDICO ESTÉTICO</div>
-  <div style="font-family:Georgia,'Times New Roman',serif;font-size:30px;color:#ffffff;margin-top:10px">Tus entradas están listas</div>
+  <div style="font-family:Georgia,'Times New Roman',serif;font-size:30px;color:#ffffff;margin-top:10px">Tus bonos están listos</div>
 </td></tr>
 <tr><td style="padding:30px 32px 8px;font-size:15px;line-height:1.6;color:#2b1f1a">
   <p style="margin:0 0 14px">${first ? `Hola, ${esc(first)}:` : 'Hola:'}</p>
-  <p style="margin:0 0 14px">Gracias por tu compra. Te adjuntamos <strong>${tickets.length === 1 ? 'tu entrada' : `tus ${tickets.length} entradas`}</strong> en PDF, una por cada tratamiento. Preséntala impresa o en el móvil cuando vengas al centro.</p>
-  <p style="margin:0 0 22px">Para reservar tu cita, llámanos al <a href="tel:+34922236677" style="color:#8f4a2a">922 236 677</a> o responde a este correo.</p>
+  <p style="margin:0 0 14px">Gracias por tu compra. Te adjuntamos <strong>${tickets.length === 1 ? 'tu bono' : `tus ${tickets.length} bonos`}</strong> en PDF, uno por cada tratamiento.</p>
+  <p style="margin:0 0 14px"><strong>¿Cómo se canjea?</strong> Cuando quieras usarlo, pide cita llamándonos al <a href="tel:+34922236677" style="color:#8f4a2a">922 236 677</a> o pasándote por el centro. El día de tu cita, presenta el bono impreso o en el móvil.</p>
+  <p style="margin:0 0 22px">¿Dudas? Responde a este correo y te ayudamos.</p>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}
     <tr><td style="padding:14px 0 0;font-family:Georgia,serif;font-size:18px;color:#2b1f1a">Total pagado</td><td align="right" style="padding:14px 0 0;font-family:Georgia,serif;font-size:18px;color:#2b1f1a">${money((session.amount_total || 0) / 100, session.currency)}</td></tr>
   </table>
 </td></tr>
 <tr><td align="center" style="padding:26px 32px 30px">
-  <a href="${esc(downloadUrl)}" style="display:inline-block;background:#8f4a2a;color:#ffffff;text-decoration:none;padding:14px 26px;border-radius:999px;font-size:14px;letter-spacing:1px">DESCARGAR MIS ENTRADAS</a>
+  <a href="${esc(downloadUrl)}" style="display:inline-block;background:#8f4a2a;color:#ffffff;text-decoration:none;padding:14px 26px;border-radius:999px;font-size:14px;letter-spacing:1px">DESCARGAR MIS BONOS</a>
   <p style="margin:14px 0 0;font-size:12px;color:#6e5b52">Referencia del pedido: <strong>${esc(tickets[0] ? tickets[0].ref : '')}</strong></p>
 </td></tr>
 <tr><td style="background:#f3e4da;padding:18px 32px;font-size:12px;line-height:1.5;color:#6e5b52;text-align:center">
@@ -120,7 +121,7 @@ async function handler(req, res) {
     if (session.payment_status !== 'paid') return res.status(200).json({ received: true, pending: true });
 
     const pi = session.payment_intent && typeof session.payment_intent === 'object' ? session.payment_intent : null;
-    if (pi && pi.metadata && pi.metadata.entradas_enviadas) return res.status(200).json({ received: true, duplicate: true });
+    if (pi && pi.metadata && pi.metadata.bonos_enviados) return res.status(200).json({ received: true, duplicate: true });
 
     const to = session.customer_details && session.customer_details.email;
     if (!to) {
@@ -133,19 +134,19 @@ async function handler(req, res) {
     const ref = tickets[0] ? tickets[0].ref : session.id.slice(-10);
     await sendEmail({
       to,
-      subject: tickets.length === 1 ? `Tu entrada Loe Marina · ${tickets[0].name}` : `Tus ${tickets.length} entradas Loe Marina`,
+      subject: tickets.length === 1 ? `Tu bono Loe Marina · ${tickets[0].name}` : `Tus ${tickets.length} bonos Loe Marina`,
       html: emailHtml(session, tickets, downloadUrl),
-      text: `Gracias por tu compra en Loe Marina. Te adjuntamos tus entradas en PDF (referencia ${ref}). También puedes descargarlas aquí: ${downloadUrl}\nReserva tu cita en el 922 236 677.`,
+      text: `Gracias por tu compra en Loe Marina. Te adjuntamos tus bonos en PDF (referencia ${ref}). También puedes descargarlos aquí: ${downloadUrl}\nPara canjearlos, pide cita en el 922 236 677 o en el centro.`,
       pdf: bytes,
-      filename: `entradas-loe-marina-${ref}.pdf`,
+      filename: `bonos-loe-marina-${ref}.pdf`,
     });
 
-    if (pi) await stripe(`/payment_intents/${pi.id}`, { method: 'POST', params: { 'metadata[entradas_enviadas]': new Date().toISOString() } });
+    if (pi) await stripe(`/payment_intents/${pi.id}`, { method: 'POST', params: { 'metadata[bonos_enviados]': new Date().toISOString() } });
     return res.status(200).json({ received: true, sent: tickets.length });
   } catch (err) {
     // Devolvemos 500 para que Stripe reintente más tarde (lo hace durante 3 días).
-    console.error('[webhook] No se pudieron enviar las entradas', err);
-    return res.status(500).json({ error: 'No se pudieron enviar las entradas' });
+    console.error('[webhook] No se pudieron enviar los bonos', err);
+    return res.status(500).json({ error: 'No se pudieron enviar los bonos' });
   }
 }
 

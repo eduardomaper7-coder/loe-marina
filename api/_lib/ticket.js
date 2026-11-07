@@ -8,6 +8,7 @@ const { PDFDocument, rgb, pushGraphicsState, popGraphicsState, rectangle, clip, 
 const fontkit = require('@pdf-lib/fontkit');
 const QRCode = require('qrcode');
 const catalog = require('../../assets/js/catalog.js');
+const { redeemUrl } = require('./bono.js');
 
 // ── Textos que el centro puede querer cambiar ─────────────────────────────────────────
 const VALIDEZ = process.env.TICKET_VALIDEZ || '12 meses desde la compra';
@@ -105,7 +106,7 @@ async function buildTicketsPdf(session) {
   const tickets = ticketsFromSession(session);
   const doc = await PDFDocument.create();
   doc.registerFontkit(fontkit);
-  doc.setTitle(`Entradas Loe Marina · ${tickets[0] ? tickets[0].ref : ''}`);
+  doc.setTitle(`Bonos Loe Marina · ${tickets[0] ? tickets[0].ref : ''}`);
   doc.setAuthor('Loe Marina');
   doc.setCreator('loemarina.com');
 
@@ -192,8 +193,8 @@ async function buildTicketsPdf(session) {
 
     // Pie
     const foot = t.gift
-      ? `Reserva tu cita en el ${TELEFONO} y presenta esta entrada al llegar.`
-      : 'Presenta esta entrada (impresa o en el móvil) al llegar al centro.';
+      ? `Pide cita en el ${TELEFONO} o en el centro y presenta este bono al llegar.`
+      : 'Pide cita antes de venir y presenta este bono (impreso o en el móvil).';
     page.drawText(foot, { x: ix, y: M + 30, size: 7.6, font: sans, color: C.soft });
     page.drawText(wrap(DIRECCION, sans, 6.6, iw, 1)[0], { x: ix, y: M + 18, size: 6.6, font: sans, color: C.soft });
 
@@ -205,11 +206,12 @@ async function buildTicketsPdf(session) {
       if (sp) spaced(page, txt, { x: cx - w / 2, y: yy, size, font, color }, sp);
       else page.drawText(txt, { x: cx - w / 2, y: yy, size, font, color });
     };
-    center('ENTRADA', sansMd, 7, H - M - 34, C.copper300, 2.4);
+    center('BONO', sansMd, 7, H - M - 34, C.copper300, 2.4);
     center(`${t.n} / ${t.total}`, sans, 19, H - M - 58, C.white, 1);
 
+    const qrText = /^pi_/.test(t.paymentId) ? redeemUrl(t.paymentId, t.n) : `LOE MARINA · Bono ${t.code} · ${t.name}`;
     const qrPng = await QRCode.toBuffer(
-      `LOE MARINA · Entrada ${t.code} · ${t.name}${t.variant ? ' (' + t.variant + ')' : ''} · Pago ${t.paymentId}`,
+      qrText,
       { errorCorrectionLevel: 'M', margin: 1, width: 360, color: { dark: '#2a1c17', light: '#fcf8f4' } }
     );
     const qr = await doc.embedPng(qrPng);
@@ -218,7 +220,7 @@ async function buildTicketsPdf(session) {
     page.drawImage(qr, { x: cx - qs / 2, y: M + 64, width: qs, height: qs });
 
     center(t.code, sansMd, 9.5, M + 38, C.white, 1.4);
-    center('VÁLIDA PARA 1 PERSONA', sans, 6, M + 24, C.copper300, 1.4);
+    center('VÁLIDO PARA 1 PERSONA', sans, 6, M + 24, C.copper300, 1.4);
   }
 
   return { bytes: await doc.save(), tickets };

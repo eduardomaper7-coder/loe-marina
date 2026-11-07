@@ -16,7 +16,7 @@ async function stripe(path, { method = 'GET', params } = {}) {
 
 // Sesión de Checkout con lo necesario para las entradas.
 function getSession(id) {
-  const q = ['line_items.data.price.product', 'payment_intent'].map((e) => `expand[]=${encodeURIComponent(e)}`).join('&');
+  const q = ['line_items.data.price.product', 'payment_intent.latest_charge'].map((e) => `expand[]=${encodeURIComponent(e)}`).join('&');
   return stripe(`/checkout/sessions/${encodeURIComponent(id)}?${q}`);
 }
 

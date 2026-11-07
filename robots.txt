@@ -3,5 +3,7 @@ Disallow: /carrito.html
 Disallow: /pedido.html
 Disallow: /gracias.html
 Disallow: /pago-cancelado.html
+Disallow: /canjear.html
+Disallow: /api/
 
 Sitemap: https://loemarina.es/sitemap.xml
