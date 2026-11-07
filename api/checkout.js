@@ -81,8 +81,9 @@ function toStripeParams(lines, origin) {
   p.append('custom_fields[0][type]', 'text');
   p.append('custom_fields[0][optional]', 'true');
   p.append('custom_fields[0][label][type]', 'custom');
-  p.append('custom_fields[0][label][custom]', 'Si es un regalo, ¿para quién es?');
-  p.append('custom_text[submit][message]', 'Tras el pago, el equipo de Loe Marina te contactará para agendar tu cita.');
+  p.append('custom_fields[0][label][custom]', '¿Es un regalo? Nombre para el bono');
+  p.append('custom_text[submit][message]', 'Recibirás tu bono en PDF al momento y de forma automática en el email que indiques arriba (revisa que esté bien escrito). Si es un regalo, puedes imprimirlo o reenviarlo a quien quieras.');
+  p.append('custom_text[after_submit][message]', 'Para canjearlo, llámanos al 922 236 677 o escríbenos y reservamos tu cita en Loe Marina (C/ Pedro Modesto Campos, Edif. Los Dragos 8, Santa Cruz de Tenerife). El pago está cifrado y lo procesa Stripe, y recibirás también el recibo de tu compra.');
 
   const summary = lines.map((l) => `${l.qty}× ${l.sku}`).join(', ').slice(0, 490);
   p.append('metadata[pedido]', summary);

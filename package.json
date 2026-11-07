@@ -1,0 +1,11 @@
+{
+  "name": "loe-marina",
+  "private": true,
+  "description": "Web de Loe Marina: estática + funciones /api de pagos (Stripe) y entradas PDF.",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "pdf-lib": "^1.17.1",
+    "qrcode": "^1.5.4"
+  }
+}

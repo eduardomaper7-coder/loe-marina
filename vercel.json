@@ -1,0 +1,6 @@
+{
+  "functions": {
+    "api/ticket.js": { "includeFiles": "{assets/img/navidad/**,assets/img/brand/monogram-sm.png,api/_lib/fonts/**}", "maxDuration": 20 },
+    "api/webhook.js": { "includeFiles": "{assets/img/navidad/**,assets/img/brand/monogram-sm.png,api/_lib/fonts/**}", "maxDuration": 30 }
+  }
+}

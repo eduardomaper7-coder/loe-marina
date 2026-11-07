@@ -345,7 +345,7 @@ button {
 
 .hero {
   position: relative;
-  min-height: calc(100svh - var(--header-h) - 34px);
+  min-height: calc(100svh - var(--header-h));
   display: grid;
   align-items: stretch;
   overflow: hidden;
@@ -1748,7 +1748,7 @@ button {
   .nav {
     display: none;
     position: fixed;
-    inset: calc(var(--header-h) + 34px) 0 0;
+    inset: var(--header-h) 0 0;
     padding: 36px 28px;
     align-items: flex-start;
     flex-direction: column;
@@ -5862,3 +5862,11 @@ body[data-page="tienda"] .demo-product-image { aspect-ratio: 1 / 1; }
 .order-summary h2 { font-family: var(--serif); font-weight: 500; font-size: 2rem; }
 .demo-cart-item .cart-qty { display: flex; width: max-content; }
 .order-summary .order-total, .demo-summary-line strong { font-variant-numeric: lining-nums; }
+
+/* Descarga de entradas tras el pago (gracias.html) */
+.order-summary .ticket-download { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; align-items: start; margin: 0 0 22px; padding: 20px 22px; border: 1px dashed var(--line-strong); border-radius: var(--radius-md); background: var(--sage-2); }
+.order-summary .ticket-download-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--cocoa); color: var(--copper-300); font-size: 1.1rem; }
+.order-summary .ticket-download strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.35rem; color: var(--ink); }
+.order-summary .ticket-download p { margin: 4px 0 0; color: var(--ink-soft); font-size: .95rem; }
+.order-summary .ticket-download p strong { display: inline; font-family: inherit; font-size: inherit; }
+.order-summary .ticket-download .btn { grid-column: 1 / -1; justify-self: start; margin-top: 10px; }
