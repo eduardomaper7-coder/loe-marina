@@ -1,4 +1,4 @@
-/* Catálogo de la tienda · Promociones de Navidad 2026 (packs 1–11)
+/* Catálogo de la tienda · Promociones de Navidad 2026 (packs 1–12)
    Lo usan la web (window.LOE_CATALOG) y el servidor de pagos (/api/checkout.js),
    así los precios que se cobran en Stripe salen siempre de este mismo archivo. */
 (function (root) {
@@ -49,8 +49,8 @@
       "handle": "triple-limpieza",
       "name": "Triple Limpieza",
       "price": 150.0,
-      "description": "<p>Un pack de tres pasos para una piel limpia, oxigenada y renovada.</p><ul><li>Limpieza facial.</li><li>LC+ Carboxiterapia.</li><li>Detoxgyne.</li></ul><p class=\"promo-note\">Promoción de Navidad válida hasta el 31 de diciembre de 2026.</p>",
-      "excerpt": "Limpieza facial, LC+ Carboxiterapia y Detoxgyne en un mismo pack.",
+      "description": "<p>Un pack de tres pasos para una piel limpia, oxigenada y renovada.</p><ul><li>Limpieza facial.</li><li>Carboxiterapia.</li><li>Detoxgyne.</li></ul><p class=\"promo-note\">Promoción de Navidad válida hasta el 31 de diciembre de 2026.</p>",
+      "excerpt": "Limpieza facial, Carboxiterapia y Detoxgyne en un mismo pack.",
       "categories": [
         "Promociones de Navidad",
         "Tratamientos faciales"
@@ -175,6 +175,32 @@
           "name": "Bono 3 sesiones",
           "price": 101.5,
           "sku": "LM-NAV26-HYDRA-OJOS-3S"
+        }
+      ]
+    },
+    {
+      "id": "limpieza-cutis",
+      "handle": "limpieza-cutis",
+      "name": "Limpieza de cutis",
+      "price": 51.0,
+      "description": "<p>Limpieza facial profunda que elimina impurezas, desobstruye los poros y deja la piel fresca, luminosa y renovada.</p><ul><li>Sesión suelta: 51 €.</li><li>Bono 3 sesiones: 101,50 €.</li></ul><p class=\"promo-note\">Promoción de Navidad válida hasta el 31 de diciembre de 2026.</p>",
+      "excerpt": "Piel limpia, fresca y luminosa. Sesión suelta o bono de 3 sesiones.",
+      "categories": [
+        "Promociones de Navidad",
+        "Tratamientos faciales"
+      ],
+      "image": "/assets/img/navidad/limpieza-cutis-beige.jpg",
+      "variantOption": "Sesiones",
+      "variants": [
+        {
+          "name": "Sesión suelta",
+          "price": 51.0,
+          "sku": "LM-NAV26-LIMPIEZA-CUTIS-1S"
+        },
+        {
+          "name": "Bono 3 sesiones",
+          "price": 101.5,
+          "sku": "LM-NAV26-LIMPIEZA-CUTIS-3S"
         }
       ]
     },
